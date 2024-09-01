@@ -1,0 +1,7 @@
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\bin\Debug\PaymentConsole.exe.config
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\bin\Debug\PaymentConsole.exe
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\bin\Debug\PaymentConsole.pdb
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\obj\Debug\PaymentConsole.csprojAssemblyReference.cache
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\obj\Debug\PaymentConsole.csproj.CoreCompileInputs.cache
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\obj\Debug\PaymentConsole.exe
+C:\Users\makievski\Desktop\c#\payment console\01 PaymentConsole\PaymentConsole\obj\Debug\PaymentConsole.pdb
