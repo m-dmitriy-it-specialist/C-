@@ -1,0 +1,18 @@
+---утилитарный запрос для расследований по разным идентификаторам в зависимости от инцидента---
+SELECT
+  [PolicyNumber], [CreationDate],
+  [AspNetUser_Id],
+  [id] [IsRegistered],
+  [Policy_Id] [UserName],
+  [UserBirthDate],
+  [UserEmail]
+FROM
+  [ICra_PROD].[dbo].[RegisteredPolicies]
+where
+  --AspNetUser_Id in ('16afa6c8-a010-4dbe-bdf4-b9ed103fff8d', 'ca6abbfd-5295-4cfd-954f-580ee2ca1e46')
+  --AspNetUser_Id = 'e9ea8975-359a-4885-99b6-8a364abaab19'
+  --or
+  ------and UserName != 'САФАРЧЕВА ИРИНА БОРИСОВНА'
+  --Policy Id = '7260c41c-1351-4e6b-9b87-33785595c58c'
+  PolicyNumber = 'XXX0126742752'
+order by CreationDate desc

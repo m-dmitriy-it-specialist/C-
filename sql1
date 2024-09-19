@@ -1,0 +1,48 @@
+---утилитарный запрос для расследований по нескольким условиям с результирующей обобщенной таблицей---- 
+SELECT Policies.Id
+,[PolicyNumber]
+--,[PolicyNumberEng]
+,Policies.PolicyFrom
+,Policies.PolicyTo
+--,[A7Number]
+--,[Print Forms Ver]
+--,[Premium]
+,[Commission_Perc]
+--,[Commission Amt]
+,[Commission2 Perc]
+--,[Commission2_Amt]
+--,[TariffVer]
+--,[TariffNet]
+--,[TariffGross]
+--,[InsuranceObjectJS]
+--,[InsuranceRisksJS]
+--,[Insurer_isInsured]
+--,[Insurer_isBeneficiary]
+,[Policy_Id]
+--,[ProgramRisk_Id]
+--,[Selected]
+--,[MedicalCardId]
+--,[FranchiseType]
+--,[FranchiseValue]
+FROM
+  [1Cra_PROD].[dbo].[PolicyRisks]
+  inner join Policies on (
+    Policies.Id
+    inner join OrgUnits on (
+      OrgUnits.Id
+      where
+        OrgUnits.HierarchyPath like '%3007%' and
+PolicyRisks.Policy_Id) Policies.OrgUnit_Id)
+PolicyRisks.InsuranceObjectJS like ' % Год выпуска_автомобиля 2015 %'
+        and insuranceprogram_id in (
+          "165","171","10")
+and
+PayDate => "2020-06-15 00:00:00.000"
+and
+Is AdditionalAgreement = 0
+and
+DeletedDate is null
+and
+CancellationDate is null
+and
+PolicyStatus = 30
